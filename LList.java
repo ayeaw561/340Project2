@@ -64,8 +64,8 @@ public class LList{
         addCount();
     }
 
-    Object get(int size){
-        if(size < 0)
+    Object get(int val){
+        if(val < 0)
             return null;
 
         Node current = null;
@@ -73,7 +73,7 @@ public class LList{
         if(head != null) {
             current = head.getNext();
 
-            for(int i = 0; i < size; i++){
+            for(int i = 0; i < val; i++){
                 if(current.getNext() == null){
                     return null;
                 }
@@ -156,4 +156,5 @@ class Node{
      void setNext(Node nextValue){
          next = nextValue;
      }
+
 }
